@@ -1,6 +1,3 @@
-# Multimodal-Ecommerce-Assistant
-A multimodal AI e-commerce assistant built with Flask. Features semantic text search using Pinecone, handwritten query processing via Tesseract OCR, and visual detection using a custom TensorFlow CNN. Delivers real-time structured product recommendations based on text, image, and handwritten inputs.
-
 # Multimodal E-commerce Assistant
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
