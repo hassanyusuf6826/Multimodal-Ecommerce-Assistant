@@ -1,0 +1,12 @@
+pinecone-client
+sentence-transformers
+flask
+flask-ngrok
+pyngrok
+pytesseract
+opencv-python
+tensorflow
+duckduckgo-search
+pandas
+requests
+Pillow

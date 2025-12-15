@@ -1,0 +1,2 @@
+experiment_id,date,model_type,base_frozen,dropout_rate,dense_units,l2_regularization,learning_rate,batch_size,augmentation,final_train_acc,final_val_acc,test_acc,train_val_gap,overfitting_score,epochs_trained,notes
+exp_20251215_065204,2025-12-15 06:52:04,MobileNetV2,True,0.3,128,0.001,0.001,32,moderate,0.9840,0.8475,0.8475,0.1365,13.65,50,"Baseline with moderate augmentation, frozen base, dropout 0.3"
