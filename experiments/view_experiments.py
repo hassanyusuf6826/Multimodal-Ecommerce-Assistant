@@ -13,10 +13,10 @@ def main():
     tracker = ExperimentTracker()
 
     if '--best' in sys.argv:
-        print("\n🏆 BEST BY TEST ACCURACY:")
+        print("\n BEST BY TEST ACCURACY:")
         tracker.get_best_experiment(metric='test_acc')
 
-        print("\n✅ BEST BY LEAST OVERFITTING:")
+        print("\nBEST BY LEAST OVERFITTING:")
         tracker.get_best_experiment(metric='train_val_gap')
 
     elif '--all' in sys.argv:
@@ -26,7 +26,7 @@ def main():
         # Default: show top 10 by test accuracy
         tracker.view_experiments(top_n=10, sort_by='test_acc')
 
-        print("\n💡 TIPS:")
+        print("\n TIPS:")
         print("  - Use 'python view_experiments.py --best' to see best experiments")
         print("  - Use 'python view_experiments.py --all' to see all experiments")
         print("  - Check 'experiments.csv' for full details")
