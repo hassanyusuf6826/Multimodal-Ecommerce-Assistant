@@ -12,7 +12,7 @@ def plot_experiments():
     """Create visualization dashboard of all experiments"""
 
     if not os.path.exists('experiments.csv'):
-        print("❌ No experiments.csv found. Run training first!")
+        print("No experiments.csv found. Run training first!")
         return
 
     # Load data
@@ -28,10 +28,10 @@ def plot_experiments():
     df_complete = df[df['test_acc'].notna()].copy()
 
     if len(df_complete) == 0:
-        print("⚠️ No experiments with test accuracy yet. Run evaluate_model.py!")
+        print("No experiments with test accuracy yet. Run evaluate_model.py!")
         return
 
-    print(f"📊 Visualizing {len(df_complete)} experiments...")
+    print(f"Visualizing {len(df_complete)} experiments...")
 
     # Set style
     sns.set_style("whitegrid")
@@ -39,7 +39,7 @@ def plot_experiments():
 
     # Create subplot layout
     fig, axes = plt.subplots(3, 2, figsize=(16, 14))
-    fig.suptitle('🔬 Experiment Analysis Dashboard', fontsize=20, fontweight='bold', y=0.995)
+    fig.suptitle('Experiment Analysis Dashboard', fontsize=20, fontweight='bold', y=0.995)
 
     # 1. Accuracy Comparison
     ax1 = axes[0, 0]
@@ -122,11 +122,11 @@ def plot_experiments():
 
     plt.tight_layout()
     plt.savefig('experiment_analysis.png', dpi=300, bbox_inches='tight')
-    print("\n✅ Visualization saved to 'experiment_analysis.png'")
+    print("\n Visualization saved to 'experiment_analysis.png'")
 
     # Print summary statistics
     print("\n" + "="*70)
-    print("📈 SUMMARY STATISTICS")
+    print("SUMMARY STATISTICS")
     print("="*70)
     print(f"Total Experiments:      {len(df_complete)}")
     print(f"Best Test Accuracy:     {df_complete['test_acc'].max():.2%}")
@@ -137,7 +137,7 @@ def plot_experiments():
     # Find best experiment
     best_idx = df_complete['test_acc'].idxmax()
     best_exp = df_complete.loc[best_idx]
-    print("\n🏆 BEST EXPERIMENT:")
+    print("\nBEST EXPERIMENT:")
     print(f"ID:           {best_exp['experiment_id']}")
     print(f"Test Acc:     {best_exp['test_acc']:.2%}")
     print(f"Overfitting:  {best_exp['train_val_gap']:.2%}")
